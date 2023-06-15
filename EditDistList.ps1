@@ -3,7 +3,13 @@ Import-Module ActiveDirectory
 Import-Module ExchangeOnlineManagement
 
 # Connect to Exchange Online
-Connect-ExchangeOnline
+try {
+    Connect-ExchangeOnline
+}
+catch {
+    Write-Host $_.Exception.Message -ForegroundColor Red
+    exit
+}
 
 #test github
 
@@ -45,4 +51,9 @@ foreach ($Req in $List) {
 
 
 # Disconnect from Exchange Online
-Disconnect-ExchangeOnline -Confirm:$false
+try {
+    Disconnect-ExchangeOnline -Confirm:$false
+}
+catch {
+    Write-Host $_.Exception.Message -ForegroundColor Red
+}
