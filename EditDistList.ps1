@@ -5,6 +5,8 @@ Import-Module ExchangeOnlineManagement
 # Connect to Exchange Online
 Connect-ExchangeOnline
 
+#test github
+
 # Import the data from CSV file and assign it to variable
 $List = Import-Csv "C:\Dory_Scripts\DistributionList\DistrList.csv" # Change the filename to the correct job role
 
