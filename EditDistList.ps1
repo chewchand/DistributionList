@@ -1,3 +1,7 @@
+#
+# Code created by Dory-Chew-Chan 16/6/23
+#
+#
 # Import AD Module
 Import-Module ActiveDirectory
 Import-Module ExchangeOnlineManagement
@@ -14,7 +18,7 @@ catch {
 #test github
 
 # Import the data from CSV file and assign it to variable
-$List = Import-Csv "C:\Dory_Scripts\DistributionList\DistrList.csv" # Change the filename to the correct job role
+$List = Import-Csv "C:\Dory_Scripts\DistributionList\DistrList.csv" # Change the filename and path to suit
 
 
 foreach ($Req in $List) {
