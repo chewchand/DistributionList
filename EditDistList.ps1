@@ -18,7 +18,7 @@ catch {
 #test github
 
 # Import the data from CSV file and assign it to variable
-$List = Import-Csv "C:\Dory_Scripts\DistributionList\DistrList.csv" # Change the filename and path to suit
+$List = Import-Csv "N:\Dory_Scripts\DistributionList\DistrList.csv" # Change the filename and path to suit
 
 
 foreach ($Req in $List) {
