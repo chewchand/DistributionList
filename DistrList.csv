@@ -1,6 +1,8 @@
 Action,Username,DistGrp
-ADD,chewchand,newstarters@denbigh.net
-ADD,faizm,newstarters@denbigh.net
-ADD,cheungs,newstarters@denbigh.net
-ADD,jameslo,newstarters@denbigh.net
-ADD,stuartbuttleh,newstarters@denbigh.net
+DEL,conwayl,firstaidemail@denbigh.net
+DEL,howelll,firstaidemail@denbigh.net
+DEL,brawns,firstaidemail@denbigh.net
+DEL,georgious,firstaidemail@denbigh.net
+DEL,rahmansa,firstaidemail@denbigh.net
+DEL,andersonr,firstaidemail@denbigh.net
+DEL,nixonc,firstaidemail@denbigh.net
