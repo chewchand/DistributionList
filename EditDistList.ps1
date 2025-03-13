@@ -1,6 +1,7 @@
 #
 # Code created by Dory-Chew-Chan 16/6/23
 #
+# Adds users to distribution lists. For external users, you can put the whole email e.g. robertsr@thedenbighalliance.org.uk
 #
 # Import AD Module
 Import-Module ActiveDirectory
@@ -18,7 +19,7 @@ catch {
 #test github
 
 # Import the data from CSV file and assign it to variable
-$List = Import-Csv "N:\Dory_Scripts\DistributionList\DistrList.csv" # Change the filename and path to suit
+$List = Import-Csv "C:\Users\chewchand\OneDrive - Denbigh School\Ndrive\Dory_Scripts\DistributionList\DistrList.csv" # Change the filename and path to suit
 
 
 foreach ($Req in $List) {
@@ -26,13 +27,14 @@ foreach ($Req in $List) {
     $Action = $Req.Action
     #Write-Host "Action = " $Action
     $Username = $Req.Username
-    #Write-Host "Username = " $Username
+    Write-Host "Username = " $Username
     $Group = $Req.DistGrp
-    #Write-Host "Group = " $Group
+    Write-Host "Group = " $Group
 
      # Add member to distribution group
     if ($Action -eq "ADD") {
         Write-Host "ADD Action"
+        
         try {
             Add-DistributionGroupMember -Identity $Group -Member $Username -ErrorAction Stop
             Write-Host $Username " is added to " $Group -ForegroundColor Green
